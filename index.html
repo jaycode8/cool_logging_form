@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>logging Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form name="regForm" onsubmit="handleReg(event)">
+                    <h1>Create Account</h1>
+                    <input type="text" placeholder="User Name" name="uname" required/>
+                    <input type="email" placeholder="Email Address" name="mail" required/>
+                    <input type="password" placeholder="Password" name="passw" required/>
+                    <i class="fa-solid fa-eye" id="show2" onclick="togglePassw2()"></i>
+                    <i class="fa-sharp fa-solid fa-eye-slash" id="hide2" onclick="togglePassw2()"></i>
+                    <input type="submit" value="Sign Up">
+                </form>
+                <div class="bts">
+                    <button class="to_sign_in" id="signIn2" onclick="signInFunc()">Sign In</button>
+                </div>
+                
+            </div>
+            <div class="form-container sign-in-container">
+                <form name="loginForm" onsubmit="handleLoggin(event)">
+                    <h1>Sign in</h1>
+                    <input type="email" placeholder="Email Address" name="mail" required/>
+                    <input type="password" placeholder="Password" name="passw" required />
+                    <i class="fa-solid fa-eye" id="show" onclick="togglePassw()"></i>
+                    <i class="fa-sharp fa-solid fa-eye-slash" id="hide" onclick="togglePassw()"></i>
+                    <a href="#">Forgot your password?</a>
+                    <input type="submit" value="Sign In">
+                </form>
+                <div class="bts">
+                    <button class="to_sign_up" id="signUp2" onclick="signUpFunc()">Sign Up</button>
+                </div>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>
+                            To keep connected with us please login with your personal info
+                        </p>
+                        <button class="ghost" id="signIn" onclick="signInFunc()">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>
+                            Enter your personal details and start journey with us
+                        </p>
+                        <button class="ghost" id="signUp" onclick="signUpFunc()">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/a50253de37.js" crossorigin="anonymous"></script>
+        <script src="jay.js"></script>
+    </body>
+</html>
